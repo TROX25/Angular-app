@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { required } from '@angular/forms/signals';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -7,12 +6,10 @@ import { required } from '@angular/forms/signals';
   styleUrl: './user.css',
 })
 export class User {
-  @Input({required: true}) avatar!: string;
-  @Input({required: true}) name!: string;
+  avatar = input.required<string>();
+  name = input.required<string>();
 
-  get imagePath(): string {
-    return `assets/users/${this.avatar}`;
-  }
+  imagePath = computed(() => `assets/users/${this.avatar()}`);
 
   selectUser() {
   }
