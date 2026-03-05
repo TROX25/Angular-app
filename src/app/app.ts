@@ -14,7 +14,7 @@ export class App {
   protected readonly title = signal('Angular-app');
   users = DUMMY_USERS;
 
-  OnSelectUser(Id: string) {
+  selectUser(Id: string) {
     console.log(`User selected: ${Id}`);
   }
 }

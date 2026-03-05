@@ -18,5 +18,4 @@ export class User {
   selectUser() {
     this.select.emit(this.id());
   }
-
 }
