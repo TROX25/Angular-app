@@ -8,4 +8,8 @@ import { Component, input, signal } from '@angular/core';
 })
 export class Tasks {
   name = input.required<string>();
+
+  addTask() {
+    alert(`Adding task for ${this.name()}`);
+  }
 }
