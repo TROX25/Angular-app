@@ -18,6 +18,6 @@
             <app-user [avatar]="users[3].avatar" [name]="users[3].name" [id]="users[3].id"
             (select)="selectUser($event)"/>
         </li>
-
     </ul>
+        <app-tasks [name]="selectedUserName()"/>
 </main>
