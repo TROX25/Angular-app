@@ -25,6 +25,6 @@ export class App {
 
   selectedUserName = computed(() => {
     const user = this.users.find(u => u.id === this.selectedUserId());
-    return user ? user.name : 'No user selected';
+    return user ? user.name : '';
   });
 }
