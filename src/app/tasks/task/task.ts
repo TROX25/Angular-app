@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Task {
 
+  editTask() {
+    alert('Editing task');
+  }
+  deleteTask() {
+    alert('Deleting task');
+  }
+  completeTask() {
+    alert('Marking task as completed');
+  }
 }
