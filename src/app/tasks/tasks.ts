@@ -13,4 +13,7 @@ export class Tasks {
   addTask() {
     alert(`Adding task for ${this.name()}`);
   }
+  deleteTask() {
+    alert(`Deleting task for ${this.name()}`);
+  }
 }

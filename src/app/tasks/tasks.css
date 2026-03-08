@@ -48,6 +48,15 @@ menu button:active {
   background-color: #a565dd;
 }
 
+menu button[color="danger"] {
+  background-color: #d32f2f;
+}
+
+menu button[color="danger"]:hover,
+menu button[color="danger"]:active {
+  background-color: #f44336;
+}
+
 ul {
   list-style: none;
   margin: 1rem 0;
