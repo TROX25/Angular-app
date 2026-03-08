@@ -52,12 +52,12 @@ menu button:active {
 }
 
 menu button[color="danger"] {
-  background-color: #d32f2f;
+  background-color: #d32f2f92;
 }
 
 menu button[color="danger"]:hover,
 menu button[color="danger"]:active {
-  background-color: #f44336;
+  background-color: #f44336ad;
 }
 
 ul {
