@@ -31,6 +31,8 @@ h2 {
 menu {
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 0.5rem;
 }
 
 menu button {
@@ -41,6 +43,7 @@ menu button {
   border: none;
   padding: 0.35rem 0.8rem;
   font-size: 0.9rem;
+  flex: 1;
 }
 
 menu button:hover,
