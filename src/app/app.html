@@ -10,8 +10,12 @@
         }
     </ul>
 
-    @if (selectedUserId !== null && selectedUserId !== undefined )
+    @if (selectedUserId() !== null && selectedUserId() !== undefined )
     {
         <app-tasks [name]="selectedUserName()"/>
+    }
+    @else 
+    {
+        <h2>Please select a user to view their tasks.</h2>
     }
 </main>

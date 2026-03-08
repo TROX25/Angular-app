@@ -1,13 +1,19 @@
 <section id="tasks">
     <header>
-        <h2>{{ name() }}'s Tasks</h2>
+        <h2>{{ name() }}'s Tasks:</h2>
         <menu>
             <button (click)="addTask()">Add Task</button>
         </menu>
     </header>
     <ul>
+        <!-- Tasks will be listed here -->
         <li>
             <app-task />
         </li>
-        <!-- Tasks will be listed here -->
+        <li>
+            <app-task />
+        </li>
+        <li>
+            <app-task />
+        </li>
     </ul>
