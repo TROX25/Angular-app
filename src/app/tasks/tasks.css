@@ -3,7 +3,14 @@
   border-radius: 8px;
   max-height: 60vh;
   overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: #3a2c54;
+}
+
+#tasks::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 header {
@@ -50,6 +57,13 @@ ul {
   gap: 1rem;
   max-height: 50vh;
   overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 @media (min-width: 768px) {
