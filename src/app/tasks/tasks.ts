@@ -10,10 +10,12 @@ import { Task } from "./task/task";
 export class Tasks {
   name = input.required<string>();
 
-  addTask() {
+  addTask() 
+  {
     alert(`Adding task for ${this.name()}`);
   }
-  deleteTask() {
+  deleteTask() 
+  {
     alert(`Deleting task for ${this.name()}`);
   }
 }
