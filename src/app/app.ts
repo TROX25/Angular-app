@@ -19,7 +19,8 @@ export class App {
   selectedUserId = signal<string | null>(null);
 
 
-  selectUser(Id: string) {
+  selectUser(Id: string) 
+  {
     this.selectedUserId.set(Id);
   }
 
