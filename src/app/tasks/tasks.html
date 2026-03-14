@@ -7,14 +7,11 @@
         </menu>
     </header>
     <ul>
-        <!-- Tasks will be listed here -->
-        <li>
-            <app-task />
-        </li>
-        <li>
-            <app-task />
-        </li>
-        <li>
-            <app-task />
-        </li>
+        @for (task of selectedUserTasks(); track task.id) 
+        {
+            <li>
+                <app-task [task]="task" />
+            </li>
+        }
     </ul>
+</section>

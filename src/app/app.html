@@ -12,7 +12,7 @@
 
     @if (selectedUserId() !== null && selectedUserId() !== undefined )
     {
-        <app-tasks [name]="selectedUserName()"/>
+        <app-tasks [name]="selectedUserName()" [userId]="selectedUserId()!"/>
     }
     @else 
     {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -7,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './task.css',
 })
 export class Task {
-
+  task = input.required<{
+    id: string;
+    userId: string;
+    title: string;
+    summary: string;
+    dueDate: string;
+  }>();
+  
   editTask() {
     alert('Editing task');
   }
