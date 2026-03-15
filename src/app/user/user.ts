@@ -10,6 +10,7 @@ export class User {
   avatar = input.required<string>();
   name = input.required<string>();
   id = input.required<string>();
+  selected = input.required<boolean>();
   // Inputs, other possibility with object instead of separate properties
   // user = input.required<{ id: string, name: string, avatar: string }>();
 

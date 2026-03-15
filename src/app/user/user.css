@@ -21,7 +21,7 @@ button {
 
 button:hover,
 button:active,
-.active {
+.selected {
   background-color: #9965dd;
   color: #150722;
 }
