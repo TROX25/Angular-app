@@ -35,6 +35,11 @@ time {
   margin-left: 0.5rem;
 }
 
+
+p button[color="success"]:hover,
+p button[color="success"]:active {
+  background-color: #50a72dde;
+}
 .actions button:hover,
 .actions button:active {
   background-color: #4a0774;
