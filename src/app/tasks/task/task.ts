@@ -19,6 +19,6 @@ export class Task {
     alert('Editing task');
   }
   completeTask() {
-    alert('Marking task as completed');
+    alert('Task completed');
   }
 }
