@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -6,7 +6,8 @@ import { Component, input } from '@angular/core';
   templateUrl: './task.html',
   styleUrl: './task.css',
 })
-export class Task {
+export class Task 
+{
   task = input.required<{
     id: string;
     userId: string;
@@ -18,7 +19,11 @@ export class Task {
   editTask() {
     alert('Editing task');
   }
-  completeTask() {
-    alert('Task completed');
+
+  complete = output<string>();
+
+  completeTask() 
+  {
+    this.complete.emit(this.task().id);
   }
 }

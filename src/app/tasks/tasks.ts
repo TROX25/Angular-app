@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
 import { Task } from "./task/task";
 
 @Component({
@@ -11,7 +11,7 @@ export class Tasks {
   name = input.required<string>();
   userId = input.required<string>();
 
-  dummyTasks = [
+  dummyTasks = signal([
   {
     id: 't1',
     userId: 'u1',
@@ -35,7 +35,7 @@ export class Tasks {
       'Prepare and describe an issue template which will help with project management',
     dueDate: '2024-06-15',
   },
-]
+]);
 
   addTask() 
   {
@@ -47,6 +47,12 @@ export class Tasks {
   }
 
  selectedUserTasks = computed(() =>
-  this.dummyTasks.filter(task => task.userId === this.userId())
+  this.dummyTasks().filter(task => task.userId === this.userId())
   );
+
+  onTaskComplete(id: string) 
+  {
+    // Wybieram tylko te taski których id jest różne od tego, który został przekazany (czyli usuwam ten task z listy)
+    this.dummyTasks.update((tasks) => tasks.filter(task => task.id !== id));
+  }
 }
