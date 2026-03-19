@@ -58,4 +58,10 @@ export class Tasks {
     // Wybieram tylko te taski których id jest różne od tego, który został przekazany (czyli usuwam ten task z listy)
     this.dummyTasks.update((tasks) => tasks.filter(task => task.id !== id));
   }
+
+  // Chce dodac mozliwosc zamkniecia okna taskowego, wiec dodaje metode cancel, która ustawia isAddingTask na false
+  onCancel() 
+  {
+    this.isAddingTask.set(false);
+  }
 }
