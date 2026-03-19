@@ -11,6 +11,8 @@ export class Tasks {
   name = input.required<string>();
   userId = input.required<string>();
 
+  isAddingTask = signal(false);
+
   dummyTasks = signal([
   {
     id: 't1',
@@ -39,7 +41,7 @@ export class Tasks {
 
   addTask() 
   {
-    alert(`Adding task for ${this.name()}`);
+    this.isAddingTask.set(true);
   }
   deleteTask() 
   {
