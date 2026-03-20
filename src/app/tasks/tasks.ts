@@ -64,4 +64,21 @@ export class Tasks {
   {
     this.isAddingTask.set(false);
   }
+
+  onTaskAdded(taskData: { title: string; summary: string; dueDate: string }) 
+  {
+    const newTask = {
+      id: Math.random().toString(), // Generuje losowe id dla nowego taska
+      userId: this.userId(), // Ustawiam userId na aktualne userId z inputu
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.dueDate,
+    };
+    this.dummyTasks.update((tasks) => [...tasks, newTask]);
+    
+    // Po dodaniu nowego taska, zamykam okno dodawania taska
+    this.isAddingTask.set(false);
+  }
+  
+
 }
