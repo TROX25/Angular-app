@@ -17,8 +17,6 @@ export class NewTask {
   enteredDueDate = "";
 
   add = output<{ title: string; summary: string; dueDate: string }>();
-
-
   
   onCancel() {
     this.cancel.emit();

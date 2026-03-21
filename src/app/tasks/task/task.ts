@@ -1,8 +1,9 @@
 import { Component, input, output } from '@angular/core';
+import { Card } from "../../shared/card/card";
 
 @Component({
   selector: 'app-task',
-  imports: [],
+  imports: [Card],
   templateUrl: './task.html',
   styleUrl: './task.css',
 })
