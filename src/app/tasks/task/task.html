@@ -1,7 +1,8 @@
 <app-card>
     <article>
     <h2>{{ task().title }}</h2>
-    <time>{{ task().dueDate }}</time>
+    <!-- https://angular.dev/api/common/DatePipe -->
+    <time>{{ task().dueDate | date :'mediumDate' }}</time>
     <summary>{{ task().summary }}</summary>
     <p class="actions">
         <button (click)="editTask()">Edit</button>
