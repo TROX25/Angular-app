@@ -30,11 +30,6 @@ export class Tasks {
     this.tasksService.getUserTasks(this.userId())
   );
 
-  onTaskComplete(id: string) 
-  {
-    this.tasksService.removeTask(id);
-  }
-
   // Chce dodac mozliwosc zamkniecia okna taskowego, wiec dodaje metode cancel, która ustawia isAddingTask na false
   onClose() 
   {

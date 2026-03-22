@@ -49,8 +49,8 @@ export class TasksService {
     this.dummyTasks.update((tasks) => [...tasks, newTask]);
     }
 
-  removeTask(taskId: string) 
+    removeTask(taskId: string) 
     {
-    this.dummyTasks.update((tasks) => tasks.filter(task => task.id !== taskId));
+        this.dummyTasks.update((tasks) => tasks.filter(task => task.id !== taskId));
     }
 }

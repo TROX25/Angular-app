@@ -1,6 +1,7 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { Card } from "../../shared/card/card";
 import { DatePipe } from '@angular/common';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-task',
@@ -17,15 +18,16 @@ export class Task
     summary: string;
     dueDate: string;
   }>();
+
+  private taskService = inject(TasksService);
   
   editTask() {
     alert('Editing task');
   }
 
-  complete = output<string>();
 
   completeTask() 
   {
-    this.complete.emit(this.task().id);
+    this.taskService.removeTask(this.task().id);
   }
 }
